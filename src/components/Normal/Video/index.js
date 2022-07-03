@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import styles from "./index.module.css";
-// import axios from 'axios';
-// import { API_KEY } from '../../../utils/helper';
+import axios from 'axios';
+import { API_KEY } from '../../../utils/helper';
 import useStore from '../../../State';
 import { useNavigate } from 'react-router-dom';
 
 export default function Video() {
 
-    const { videos, setCurrentVideo } = useStore(state => state);
+    const {_fetchVideo, videos, setCurrentVideo } = useStore(state => state);
 
 
     // const videos = [
@@ -28,21 +28,7 @@ export default function Video() {
     // ]
 
 
-    //  Function definition
-    // const fetchVideos = () => {
-    //     axios({
-    //         method: "GET",
-    //         url: `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&key=${API_KEY}`
-    //     }).then((response) => {
-    //         console.log("Videos aa gayi backend se", JSON.stringify(response));
 
-    //         _fetchVideo(response.data.items);
-
-    //     }).catch((error) => {
-
-    //         console.log("ERROR aa gaya", error);
-    //     })
-    // }
 
     const navigation = useNavigate();
     const watchVideo = (video) => {
@@ -51,8 +37,24 @@ export default function Video() {
     }
 
     useEffect(() => {
-        // fetchVideos(); // functionn calling
-    }, [])
+            //  Function definition
+    const fetchVideos = () => {
+        axios({
+            method: "GET",
+            url: `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&key=${API_KEY}`
+        }).then((response) => {
+            console.log("Videos aa gayi backend se", JSON.stringify(response));
+
+            _fetchVideo(response.data.items);
+
+        }).catch((error) => {
+
+            console.log("ERROR aa gaya", error);
+        })
+    }
+
+        fetchVideos(); // functionn calling
+    }, [_fetchVideo])
 
     return (
         <div className={styles.mainContainer} >
