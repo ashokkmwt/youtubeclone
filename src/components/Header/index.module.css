@@ -1,0 +1,170 @@
+header {
+    width: 100%;
+    height: 56px;
+    /* background-color: #202020; */
+}
+
+.headerContainer {
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow; */
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerLeft {
+    width: 169px;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.threelinelogo {
+    width: 40px;
+    height: 40px;
+    /* background-color: white; */
+    padding: 8px 8px;
+    cursor: pointer;
+}
+
+.ytlogo {
+    width: 129px;
+    height: 100%;
+    /* background-color: palevioletred; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.headerLeft p {
+    /* width: 9.85px; */
+    height: 44px;
+    margin-top: 12px;
+    font-size: 10px;
+    font-weight: 600;
+    /* background-color: rgba(0, 0, 0, 0); */
+    cursor: pointer;
+}
+
+.headerMiddle {
+    width: 728px;
+    height: 40px;
+    /* background-color: cadetblue; */
+    display: flex;
+    flex-direction: row;
+}
+
+.searchBar {
+    width: 636px;
+    height: 100%;
+    /* background-color: chocolate; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 40px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.headerInput {
+    width: 572px;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.headerInput input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 0.5px solid rgb(210, 183, 183);
+    padding-left: 5px;
+    font-size: 16px;
+}
+
+.serchIcon {
+    width: 64px;
+    height: 100%;
+    background-color: rgb(240, 232, 232);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid rgb(210, 183, 183);
+    cursor: pointer;
+}
+
+.micContainer {
+    width: 40px;
+    height: 40px;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+}
+
+
+.headerRight {
+    width: 204px;
+    height: 40px;
+    /* background-color: gray; */
+    display: flex;
+    flex-direction: row;
+}
+
+.streameBox {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    /* background-color: navy; */
+    margin-left: 21px;
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuBox {
+    width: 40px;
+    height: 40px;
+    /* background-color: navy; */
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.notificationBox {
+    width: 40px;
+    height: 40px;
+    /* background-color: navy; */
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profileBox {
+    width: 60px;
+    height: 40px;
+    /* background-color: navy; */
+    /* margin-right: 14px;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileBox img {
+    border-radius: 50%;
+    cursor: pointer;
+}

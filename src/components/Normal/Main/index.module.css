@@ -1,0 +1,18 @@
+main {
+    width: 100%;
+    height: calc(100% - 56px);
+    display: flex;
+    flex-direction: row;
+}
+
+
+.mainRight {
+    width: 95%;
+    height: 100%;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 750px) {
+    .mainLeft {
+        display: none;
+    }
+}

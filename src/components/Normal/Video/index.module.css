@@ -1,0 +1,90 @@
+.mainContainer {
+    width: 100%;
+    height: calc(100% - 56px);
+    margin-top: 23px;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    gap: 5px;
+}
+
+.videoBox {
+    flex: 1;
+    flex-basis: 275px;
+    height: 348px;
+    /* background-color: rgb(111, 61, 61); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transform: scale(1);
+
+}
+
+.videoBox:hover {
+    transform: scale(1.1);
+}
+
+.videoThumbnails {
+    width: 320px;
+    height: 180px;
+    /* background-color: rgb(68, 27, 79); */
+}
+
+.videoThumbnails img {
+    width: 100%;
+    height: 100%;
+}
+
+.videologoContainer {
+    width: 46px;
+    height: 100%;
+    padding-top: 10px;
+    /* padding-left: 10px; */
+}
+
+.videoLogo {
+    width: 36px;
+    height: 36px;
+    /* background-color: red; */
+    border-radius: 100%;
+}
+
+.videoLogo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: fill;
+}
+
+.titleContainer {
+    width: 320px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    /* background-color: gold; */
+    /* padding-left: 12px; */
+    /* padding-right: 12px; */
+    /* padding-top: 12px; */
+    font-size: 14px;
+    gap: 10px;
+}
+
+.videoDetail {
+    width: 100%;
+    height: 100%;
+    text-align: start;
+    /* background-color: ivory; */
+    padding-top: 12px;
+    font-weight: 500;
+
+}
+
+.performance {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    font-weight: 400;
+}

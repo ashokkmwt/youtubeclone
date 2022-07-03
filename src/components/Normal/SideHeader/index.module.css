@@ -1,0 +1,86 @@
+
+
+.sideBarContainer{
+    width: auto;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.newMainLeftIcon {
+    /* width: 20%; */
+    width: 220px;
+    height: 52px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1px;
+    padding-left: 15px;
+    /* background-color: red; */
+}
+
+.newMainLeftIcon:hover {
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+
+.newHomeicon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: yellow; */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+/* For testing */
+
+
+.mainLeft {
+    width: 72px;
+    height: 100%;
+    background-color: yellow;
+}
+
+.sideBar {
+    width: 15%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.mainLeftIcon {
+    width: 90%;
+    height: 74px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.mainLeftIcon p {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.homeicon {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 750px) {
+    .mainLeft {
+        display: none;
+    }
+}

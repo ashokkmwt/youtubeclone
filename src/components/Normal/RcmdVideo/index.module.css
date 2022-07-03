@@ -1,0 +1,81 @@
+.recommendVideoContainer {
+    /* width: 500px; */
+    width: 40%;
+    height: 100%;
+    /* background-color: yellowgreen; */
+    padding-right: 84px;
+}
+
+.filterBar{
+    width: 90%;
+}
+
+.chatBar {
+    width: 100%;
+    height: 28px;
+    background-color: white;
+    font-size: 11px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.recommendVideo{
+    width: 90%;
+    height: 100px;
+    /* background-color: rgb(168, 29, 29); */
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+.rcmdThumbnail{
+    width: 45%;
+    height: 100%;
+    background-color: olive;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.rcmdThumbnail div{
+    /* display: none; */
+    position: absolute;
+    right: 1px;
+}
+
+.queueIcon{
+    /* display: none; */
+    position: absolute;
+    right: 1px;
+    top: 30px;
+}
+
+.rcmdTitleBar{
+    width: 55%;
+    height: 100%;
+    /* background-color: rgb(59, 72, 128); */
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+}
+
+.rcmdTitleBar h6{
+    font-size: 16px;
+}
+
+.rcmdTitleBar div{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 13px;
+}
+
+@media only screen and (min-width:0px) and (max-width:750px) {
+    .recommendVideoContainer{
+        display: none;
+    }
+}
