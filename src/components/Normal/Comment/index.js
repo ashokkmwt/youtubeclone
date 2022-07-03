@@ -3,34 +3,31 @@ import styles from "./index.module.css";
 import sortIcon from "../../../assets/icons/sort-icon.svg";
 import profileIcon from "../../../assets/icons/profile-icon.jpg";
 import useCommentsStore from '../../../State/comments';
-import { API_KEY } from '../../../utils/helper';
-import axios from 'axios';
-import useStore from '../../../State';
-import { useParams } from 'react-router-dom';
+// import { API_KEY } from '../../../utils/helper';
+// import axios from 'axios';
+// import { useParams } from 'react-router-dom';
 
 
-export default function () {
+export default function Comments() {
 
-  const { id } = useParams();
-  const { currentVideo } = useStore(state => state)
+  // const { id } = useParams();
 
-
-  const { _fetchComments, comments } = useCommentsStore(state => state);
+  const { comments } = useCommentsStore(state => state);
   // console.log("yaha par dekho",comments);
 
 
-  const fetchComments = () => {
-    axios({
-      method: "GET",
-      url: `https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&maxResults=90&videoId=${id}&key=${API_KEY}`
-    }).then((response) => {
-      _fetchComments(response.data.items);
+  // const fetchComments = () => {
+  //   axios({
+  //     method: "GET",
+  //     url: `https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&maxResults=90&videoId=${id}&key=${API_KEY}`
+  //   }).then((response) => {
+  //     _fetchComments(response.data.items);
 
-    }).catch((error) => {
+  //   }).catch((error) => {
 
-      console.log("ERROR aa gaya", error);
-    })
-  }
+  //     console.log("ERROR aa gaya", error);
+  //   })
+  // }
 
   useEffect(() => {
     // fetchComments();

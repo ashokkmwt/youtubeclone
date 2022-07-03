@@ -1,45 +1,45 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import styles from "./index.module.css";
 import YoutubeTags from '../YoutubeTags';
 import watchlaterIcon from "../../../assets/icons/watchLater-icon.svg";
 import queueIcon from "../../../assets/icons/queue-icon.svg";
 import useStore from '../../../State';
 import axios from 'axios';
-import { API_KEY } from '../../../utils/helper';
+// import { API_KEY } from '../../../utils/helper';
 import { useParams } from 'react-router-dom';
 
 export default function RcmdVideo() {
 
 
-    const [errorScreen, setErrorScreen] = useState(false)
+    // const [errorScreen, setErrorScreen] = useState(false)
     const { id } = useParams();
-    const { _fetchRcmdVideo, rcmdVideo, currentVideo } = useStore(state => state);
-    console.log(_fetchRcmdVideo);
+    const { rcmdVideo } = useStore(state => state);
 
 
-    const fetchRcmdVideo = () => {
-        // alert("huaa kuch")
-        axios({
-            method: "GET",
-            url: `https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list?part=snippet&type=video&relatedToVideoId=${id}`
-            // url: `https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list?part=snippet&type=video&relatedToVideoId=&key=${API_KEY}`
-        }).then((response) => {
-            console.log("Videos aa gayi backend se", JSON.stringify(response));
-            // console.log(response);
-
-            // _fetchRcmdVideo(response.data.items);
-
-        }).catch((error) => {
-
-            // setErrorScreen(true);
-
-            console.log("ERROR aa gaya", error);
-        })
-    }
+  
 
     useEffect(() => {
+        const fetchRcmdVideo = () => {
+            // alert("huaa kuch")
+            axios({
+                method: "GET",
+                url: `https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list?part=snippet&type=video&relatedToVideoId=${id}`
+                // url: `https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list?part=snippet&type=video&relatedToVideoId=&key=${API_KEY}`
+            }).then((response) => {
+                console.log("Videos aa gayi backend se", JSON.stringify(response));
+                // console.log(response);
+    
+                // _fetchRcmdVideo(response.data.items);
+    
+            }).catch((error) => {
+    
+                // setErrorScreen(true);
+    
+                console.log("ERROR aa gaya", error);
+            })
+        }
         fetchRcmdVideo();
-    }, [])
+    }, [id]);
 
 
     // const recommendedVideos = [

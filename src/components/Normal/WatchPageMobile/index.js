@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import useStore from '../../../State';
 import styles from "./index.module.css";
@@ -11,10 +11,9 @@ import moreIcon from "../../../assets/icons/more-icon.svg";
 import notificationIcon from "../../../assets/icons/notification-icon.svg";
 import RcmdVideo from '../RcmdVideo';
 import Comment from '../Comment';
-import SideHeader from '../SideHeader';
 // import { isCompositeComponent } from 'react-dom/test-utils';
 
-export default function () {
+export default function WatchPageMobile() {
 
     const likeBtnsIcon = [
         {
@@ -49,7 +48,7 @@ export default function () {
     ]
 
     const { id } = useParams();
-    const { currentVideo, isSideBarVisible } = useStore(state => state);
+    const { currentVideo } = useStore(state => state);
 
     return (
         <>
@@ -67,7 +66,7 @@ export default function () {
                                 {likeBtnsIcon.map((icon, index) => {
                                     return (
                                         <div key={index} className={styles.iconDetail}>
-                                            <img width={24} height={24} src={icon.img} />
+                                            <img width={24} height={24} src={icon.img} alt="like button" />
                                             <p>{icon.text}</p>
                                         </div>
                                     )

@@ -14,7 +14,7 @@ import Comment from '../Comment';
 import WatchPageMobile from '../WatchPageMobile';
 import SideHeader from '../SideHeader';
 
-export default function () {
+export default function WatchPage() {
 
     const likeBtnsIcon = [
         {
@@ -73,7 +73,7 @@ export default function () {
                                 {likeBtnsIcon.map((icon, index) => {
                                     return (
                                         <div key={index} className={styles.iconDetail}>
-                                            <img width={24} height={24} src={icon.img} />
+                                            <img width={24} height={24} src={icon.img} alt="like button" />
                                             <p>{icon.text}</p>
                                         </div>
                                     )

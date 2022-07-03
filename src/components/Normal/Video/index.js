@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import styles from "./index.module.css";
-import axios from 'axios';
-import { API_KEY } from '../../../utils/helper';
+// import axios from 'axios';
+// import { API_KEY } from '../../../utils/helper';
 import useStore from '../../../State';
 import { useNavigate } from 'react-router-dom';
 
 export default function Video() {
 
-    const { _fetchVideo, videos, setCurrentVideo } = useStore(state => state);
+    const { videos, setCurrentVideo } = useStore(state => state);
 
 
     // const videos = [
@@ -29,20 +29,20 @@ export default function Video() {
 
 
     //  Function definition
-    const fetchVideos = () => {
-        axios({
-            method: "GET",
-            url: `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&key=${API_KEY}`
-        }).then((response) => {
-            console.log("Videos aa gayi backend se", JSON.stringify(response));
+    // const fetchVideos = () => {
+    //     axios({
+    //         method: "GET",
+    //         url: `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&key=${API_KEY}`
+    //     }).then((response) => {
+    //         console.log("Videos aa gayi backend se", JSON.stringify(response));
 
-            _fetchVideo(response.data.items);
+    //         _fetchVideo(response.data.items);
 
-        }).catch((error) => {
+    //     }).catch((error) => {
 
-            console.log("ERROR aa gaya", error);
-        })
-    }
+    //         console.log("ERROR aa gaya", error);
+    //     })
+    // }
 
     const navigation = useNavigate();
     const watchVideo = (video) => {
@@ -58,8 +58,8 @@ export default function Video() {
         <div className={styles.mainContainer} >
             {videos.map((video, index) => {
                 return (
-                    <div onClick={() => watchVideo(video)} key={index} className={styles.videoBox}>         
-                     {/* remember onclick method */}
+                    <div onClick={() => watchVideo(video)} key={index} className={styles.videoBox}>
+                        {/* remember onclick method */}
                         <div className={styles.videoThumbnails}>
                             <img src={video.snippet.thumbnails.high.url} alt="thumbnail" />
                         </div>
